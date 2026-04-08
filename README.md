@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hand Tracking with Sakura Blossoms 🌸
 
-## Getting Started
+*This project was created as part of the university course "Vibe Coding".*
 
-First, run the development server:
+## Description
+This web application utilizes your device's webcam to recognize and track hands in real-time, operating entirely within a **Next.js** environment fueled by the **MediaPipe** library. It features a creative and dynamic visual overlay:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Sakura Branches:** The standard hand tracking mesh has been artistically modified so that your hand's structure resembles a delicate web of brown branches.
+- **Falling Blossoms:** Instead of traditional red landmarks, each joint is represented by a small sakura flower. As you move your hands, interactive sakura petals fall from your fingertips.
+- **Dynamic Colors:** The falling blossom petals vividly alternate their shade of pink depending on how high and low you move your hands in the frame.
+- **Floor Accumulation:** A custom physics simulation system tracks where each petal lands, piling them up smoothly at the bottom of the screen.
+- **Clearing Sequence:** Once the accumulated pile of petals safely reaches halfway up the screen window, a visually pleasing drop-sequence occurs alongside continuous hand-tracking, clearing the space for a fresh cycle!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Quick Start
+1. Ensure you have installed the project's dependencies via `npm install`
+2. Start the local server with `npm run dev`
+3. Navigate to [http://localhost:3000](http://localhost:3000)
+4. Allow browser camera permissions and watch the magic happen!
