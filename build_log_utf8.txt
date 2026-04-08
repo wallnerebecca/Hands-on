@@ -1,0 +1,762 @@
+﻿Ôû▓ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\nvm4w\nodejs/n
+ode.exe" "C:\nvm4w\nod
+ejs/node_modules/npm/b
+in/np ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (:String) [   
+ ], RemoteExceptio    
+n
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+> Build error occurred
+Error: Turbopack 
+build failed with 11 
+errors:
+./src/app/page.tsx:3:2
+1
+`ssr: false` is not 
+allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it into a 
+Client Component.
+  [90m1 |[0m 
+[36mimport[0m 
+dynamic [36mfrom[0m 
+[32m"next/dynamic"[0
+m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 
+|[0m [36mconst[0m 
+[33mHandTracker[0m 
+= dynamic(() => [36mi
+mport[0m([32m"./Hand
+Tracker"[0m), {
+  [90m  |[0m        
+             [31m[1m
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m4 
+|[0m   ssr: 
+[36mfalse[0m,
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m5 
+|[0m });
+  [90m  |[0m 
+[31m[1m^^[0m
+  [90m6 |[0m
+  [90m7 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m 
+[33mPage[0m() {
+  [90m8 |[0m   
+[36mreturn[0m 
+<[33mHandTracker[0m 
+/>;
+
+Ecmascript file had 
+an error
+
+
+./src/app/HandTracker.
+tsx:4:1
+Export Camera doesn't 
+exist in target module
+  [90m2 |[0m
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+[31m[1m>[0m [90m4 
+|[0m [36mimport[0m 
+{ [33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^[0m
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+
+The export Camera was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/camera_utils
+/camera_utils.js 
+[app-client] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:4:1
+Export Camera doesn't 
+exist in target module
+  [90m2 |[0m
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+[31m[1m>[0m [90m4 
+|[0m [36mimport[0m 
+{ [33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^[0m
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+
+The export Camera was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/camera_utils
+/camera_utils.js 
+[app-ssr] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:5:1
+Export 
+HAND_CONNECTIONS 
+doesn't exist in 
+target module
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+[31m[1m>[0m [90m5 
+|[0m [36mimport[0m 
+{ [33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^[0m
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+
+The export 
+HAND_CONNECTIONS was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/hands/hands.
+js [app-client] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:5:1
+Export 
+HAND_CONNECTIONS 
+doesn't exist in 
+target module
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+[31m[1m>[0m [90m5 
+|[0m [36mimport[0m 
+{ [33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^[0m
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+
+The export 
+HAND_CONNECTIONS was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/hands/hands.
+js [app-ssr] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:5:1
+Export Hands doesn't 
+exist in target module
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+[31m[1m>[0m [90m5 
+|[0m [36mimport[0m 
+{ [33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^[0m
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+
+The export Hands was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/hands/hands.
+js [app-client] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:5:1
+Export Hands doesn't 
+exist in target module
+  [90m3 |[0m 
+[36mimport[0m { 
+useEffect, useRef, 
+useState } 
+[36mfrom[0m 
+[32m"react"[0m;
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+[31m[1m>[0m [90m5 
+|[0m [36mimport[0m 
+{ [33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^[0m
+  [90m6 |[0m 
+[36mimport[0m { 
+drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+
+The export Hands was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/hands/hands.
+js [app-ssr] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:6:1
+Export drawConnectors 
+doesn't exist in 
+target module
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+[31m[1m>[0m [90m6 
+|[0m [36mimport[0m 
+{ drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+  [90m9 |[0m   
+[36mconst[0m 
+videoRef = useRef<[33
+mHTMLVideoElement[0m>
+([36mnull[0m);
+
+The export 
+drawConnectors was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/drawing_util
+s/drawing_utils.js 
+[app-client] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:6:1
+Export drawConnectors 
+doesn't exist in 
+target module
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+[31m[1m>[0m [90m6 
+|[0m [36mimport[0m 
+{ drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+  [90m9 |[0m   
+[36mconst[0m 
+videoRef = useRef<[33
+mHTMLVideoElement[0m>
+([36mnull[0m);
+
+The export 
+drawConnectors was 
+not found in module [p
+roject]/node_modules/@
+mediapipe/drawing_util
+s/drawing_utils.js 
+[app-ssr] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:6:1
+Export drawLandmarks 
+doesn't exist in 
+target module
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+[31m[1m>[0m [90m6 
+|[0m [36mimport[0m 
+{ drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+  [90m9 |[0m   
+[36mconst[0m 
+videoRef = useRef<[33
+mHTMLVideoElement[0m>
+([36mnull[0m);
+
+The export 
+drawLandmarks was not 
+found in module [proje
+ct]/node_modules/@medi
+apipe/drawing_utils/dr
+awing_utils.js 
+[app-client] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+./src/app/HandTracker.
+tsx:6:1
+Export drawLandmarks 
+doesn't exist in 
+target module
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mCamera[0m } 
+[36mfrom[0m [32m"@m
+ediapipe/camera_utils"
+[0m;
+  [90m5 |[0m 
+[36mimport[0m { 
+[33mHands[0m, 
+[33mResults[0m, [33
+mHAND_CONNECTIONS[0m 
+} [36mfrom[0m [32m"
+@mediapipe/hands"[0m;
+[31m[1m>[0m [90m6 
+|[0m [36mimport[0m 
+{ drawConnectors, 
+drawLandmarks } 
+[36mfrom[0m [32m"@m
+ediapipe/drawing_utils
+"[0m;
+  [90m  |[0m [31m[
+1m^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m [33
+mHandTracker[0m() {
+  [90m9 |[0m   
+[36mconst[0m 
+videoRef = useRef<[33
+mHTMLVideoElement[0m>
+([36mnull[0m);
+
+The export 
+drawLandmarks was not 
+found in module [proje
+ct]/node_modules/@medi
+apipe/drawing_utils/dr
+awing_utils.js 
+[app-ssr] 
+(ecmascript).
+The module has no 
+exports at all.
+All exports of the 
+module are statically 
+known (It doesn't 
+have dynamic 
+exports). So it's 
+known statically that 
+the requested export 
+doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/app/HandTrac
+ker.tsx
+    ./src/app/page.tsx
+
+
+    at <unknown> (./sr
+c/app/page.tsx:3:21)
+    at <unknown> (./sr
+c/app/HandTracker.tsx:
+4:1)
+    at <unknown> (./sr
+c/app/HandTracker.tsx:
+4:1)
+    at <unknown> (./sr
+c/app/HandTracker.tsx:
+5:1)
+    ... collapsed 3 
+duplicate lines 
+matching above 1 
+lines 3 times...
+    at <unknown> (./sr
+c/app/HandTracker.tsx:
+6:1)
+    ... collapsed 3 
+duplicate lines 
+matching above 1 
+lines 3 times...
