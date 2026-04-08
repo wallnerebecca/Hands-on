@@ -1,3 +1,15 @@
+# Hand Tracking with Sakura Blossoms 🌸
+
+*This project was created as part of the university course "Vibe Coding".*
+
+## Description
+This web application utilizes the device webcam to recognize and track hands in real-time using the **MediaPipe** library in a **Next.js** environment. The application features a dynamic visual overlay:
+- The hand landmarks are rendered as a detailed mesh of brown branches with miniature sakura blossoms.
+- As the hands move, sakura petals with dynamic colors fall from the fingertips depending on the hands' vertical position.
+- A customized physics system aggregates the fallen sakura at the bottom of the screen. Once the pile reaches halfway up the screen, a clearing sequence triggers, dropping all the accumulated blossoms simultaneously out of the viewport.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
